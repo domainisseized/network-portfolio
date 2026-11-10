@@ -1,40 +1,37 @@
 # Lab 01: Basic Ping
 
-**Objective:** Connect 2 PCs and verify connectivity.
+**Objective:** Connect 2 PCs and verify connectivity using different cable types.
 
 ## Configuration
-- PC1: 192.168.1.10 / 255.255.255.0
-- PC2: 192.168.1.11 / 255.255.255.0
+- PC1 (user1): 192.168.1.10 / 255.255.255.0
+- PC2 (user 2): 192.168.1.11 / 255.255.255.0
 
-## Tests
-- **Test 1:** PC to PC with crossover cable. Ping succeeds.
-- **Test 2:** PC to PC with straight-through cable. Ping fails (like devices need crossover).
-- **Test 3:** PC to switch to PC with straight-through cables. Ping succeeds.
-
-## Screenshots
-**Crossover topology**
+## Test 1: Crossover cable (PC to PC)
+Two like devices connected directly need a crossover cable. Both link lights are green.
 
 ![Crossover topology](Crossover%20Connection.png)
 
-**Crossover ping success**
+Ping from PC1 to PC2 succeeds with 0% loss.
 
 ![Crossover ping](Crossover%20Connection%20Ping.png)
 
-**Straight-through (PC to PC) test**
+## Test 2: Straight-through cable (PC to PC)
+Ping fails. Like devices need a crossover cable, because a straight-through cable connects transmit to transmit.
 
-![Straight-through test](lab%201%20straight-through%20cable.png)
+## Test 3: Straight-through cables through a switch
+PC1 and PC2 each connect to a 2960 switch with straight-through cables. All link lights are green.
 
-**Switch test: topology**
+![Switch topology](lab%201%20straight-through%20cable.png)
 
-![Switch topology](Screenshot%202026-11-10%20101731.png)
+Ping from PC2 to PC1 succeeds. The first reply is slower because of the ARP lookup.
 
-**Switch test: ping success**
+![Switch ping, first run](Screenshot%202026-11-10%20101731.png)
 
-![Switch ping](Screenshot%202026-11-10%20101844.png)
+![Switch ping, second run](Screenshot%202026-11-10%20101844.png)
 
-**Third screenshot**
+Switch port status, showing FastEthernet0/1 and 0/2 Up:
 
-![Extra screenshot](Screenshot%202026-11-10%20102005.png)
+![Switch ports](Screenshot%202026-11-10%20102005.png)
 
-## TL;DR
-Like devices need crossover; unlike devices need straight-through type of cable.
+## TL;DR:
+Like devices need crossover cables; unlike devices need straight-through cables. The first ping through a switch is often slower while ARP resolves the MAC address.
