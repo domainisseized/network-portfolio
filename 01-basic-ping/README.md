@@ -24,5 +24,17 @@
 
 ![Straight-through test](lab%201%20straight-through%20cable.png)
 
+**Switch test: topology**
+
+![Switch topology](Screenshot%202026-11-10%20101731.png)
+
+**Switch test: ping success**
+
+![Switch ping](Screenshot%202026-11-10%20101844.png)
+
+**Third screenshot**
+
+![Extra screenshot](Screenshot%202026-11-10%20102005.png)
+
 ## TL;DR
 Like devices need crossover; unlike devices need straight-through type of cable.
