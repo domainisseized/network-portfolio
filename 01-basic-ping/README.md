@@ -11,12 +11,18 @@ Two like devices connected directly need a crossover cable. Both link lights are
 
 ![Crossover topology](Crossover%20Connection.png)
 
+[Download the Packet Tracer file](Copper%20Cross-Over%20P2P.pkt)
+
 Ping from PC1 to PC2 succeeds with 0% loss.
 
 ![Crossover ping](Crossover%20Connection%20Ping.png)
 
 ## Test 2: Straight-through cable (PC to PC)
 Ping fails. Like devices need a crossover cable, because a straight-through cable connects transmit to transmit.
+
+![Straight-through ping fails](Screenshot%202026-11-11%20005855.png)
+
+[Download the Packet Tracer file](Copper%20Straight-Through%20failed%20P2P.pkt)
 
 ## Test 3: Straight-through cables through a switch
 PC1 and PC2 each connect to a 2960 switch with straight-through cables. All link lights are green.
@@ -32,6 +38,8 @@ Ping from PC2 to PC1 succeeds. The first reply is slower because of the ARP look
 Switch port status, showing FastEthernet0/1 and 0/2 Up:
 
 ![Switch ports](Screenshot%202026-11-10%20102005.png)
+
+[Download the Packet Tracer file](Copper%20Straight-Through%20P2P.pkt)
 
 ## TL;DR:
 Same type of devices need crossover cables; Different type of devices need straight-through cables. The first ping through a switch is often slower while ARP resolves the MAC address.
