@@ -34,4 +34,4 @@ Switch port status, showing FastEthernet0/1 and 0/2 Up:
 ![Switch ports](Screenshot%202026-11-10%20102005.png)
 
 ## TL;DR:
-Like devices need crossover cables; unlike devices need straight-through cables. The first ping through a switch is often slower while ARP resolves the MAC address.
+Same type of devices need crossover cables; Different type of devices need straight-through cables. The first ping through a switch is often slower while ARP resolves the MAC address.
